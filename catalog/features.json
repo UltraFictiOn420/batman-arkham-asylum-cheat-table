@@ -1,0 +1,2332 @@
+[
+  {
+    "version": "v1",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "12",
+    "category": "Batman / Survival",
+    "purpose": "No Hit Box / Invincible (No Damage + Reduced Knockback)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "13",
+    "category": "Batman / Survival",
+    "purpose": "Fly Mode / No Gravity [Experimental]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Combo / Progression",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "41",
+    "category": "Combo / Progression",
+    "purpose": "Combo Hit Count = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "42",
+    "category": "Combo / Progression",
+    "purpose": "Combo Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "43",
+    "category": "Combo / Progression",
+    "purpose": "XP = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "44",
+    "category": "Combo / Progression",
+    "purpose": "XP Target",
+    "codeType": "Float",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "45",
+    "category": "Combo / Progression",
+    "purpose": "Available Upgrade Points = Target [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "46",
+    "category": "Combo / Progression",
+    "purpose": "Upgrade Points Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "47",
+    "category": "Combo / Progression",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v1",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Planned after live-state capture: Waypoint Teleport + Undetectable",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT"
+  },
+  {
+    "version": "v2",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "12",
+    "category": "Batman / Survival",
+    "purpose": "No Hit Box / Invincible (No Damage + Reduced Knockback)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "13",
+    "category": "Batman / Survival",
+    "purpose": "Fly Mode / No Gravity [Experimental]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Combo / Progression",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "41",
+    "category": "Combo / Progression",
+    "purpose": "Combo Hit Count = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "42",
+    "category": "Combo / Progression",
+    "purpose": "Combo Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "43",
+    "category": "Combo / Progression",
+    "purpose": "XP = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "44",
+    "category": "Combo / Progression",
+    "purpose": "XP Target",
+    "codeType": "Float",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "45",
+    "category": "Combo / Progression",
+    "purpose": "Available Upgrade Points = Target [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "46",
+    "category": "Combo / Progression",
+    "purpose": "Upgrade Points Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "47",
+    "category": "Combo / Progression",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v2",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Planned after live-state capture: Waypoint Teleport + Undetectable",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT"
+  },
+  {
+    "version": "v3",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "12",
+    "category": "Batman / Survival",
+    "purpose": "God Mode / No Damage",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "14",
+    "category": "Batman / Survival",
+    "purpose": "No Hit Detection / No Reactions + God Mode [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "13",
+    "category": "Batman / Survival",
+    "purpose": "Fly Mode / No Gravity [Experimental]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Combo / Progression",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "41",
+    "category": "Combo / Progression",
+    "purpose": "Combo Hit Count = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "42",
+    "category": "Combo / Progression",
+    "purpose": "Combo Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "43",
+    "category": "Combo / Progression",
+    "purpose": "XP = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "44",
+    "category": "Combo / Progression",
+    "purpose": "XP Target",
+    "codeType": "Float",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "48",
+    "category": "Combo / Progression",
+    "purpose": "Add XP Once",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "49",
+    "category": "Combo / Progression",
+    "purpose": "XP Amount to Add",
+    "codeType": "Float",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "45",
+    "category": "Combo / Progression",
+    "purpose": "Available Upgrade Points = Target [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "46",
+    "category": "Combo / Progression",
+    "purpose": "Upgrade Points Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "47",
+    "category": "Combo / Progression",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v3",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Planned after live-state capture: Waypoint Teleport + Undetectable",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT"
+  },
+  {
+    "version": "v4",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "12",
+    "category": "Batman / Survival",
+    "purpose": "God Mode / No Damage",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gameplay / Time",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "47",
+    "category": "Gameplay / Time",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height (F1)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      112
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights (F2)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      113
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights (F3)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      114
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights (F4)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      115
+    ],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v4",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Future Test: Undetectable / Enemies Ignore Batman",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT"
+  },
+  {
+    "version": "v5",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test] (-)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      189
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test] (=)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      187
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gameplay / Time",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "47",
+    "category": "Gameplay / Time",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height (F1)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      112
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights (F2)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      113
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights (F3)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      114
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights (F4)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      115
+    ],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v5",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Future Test: Undetectable / Enemies Ignore Batman",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT"
+  },
+  {
+    "version": "v6",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test] (-)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      189
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test] (=)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      187
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gameplay / Time",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "47",
+    "category": "Gameplay / Time",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height (F1)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      112
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights (F2)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      113
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights (F3)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      114
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights (F4)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      115
+    ],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v6",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Future Test: Undetectable / Enemies Ignore Batman",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT"
+  },
+  {
+    "version": "v7",
+    "id": "1",
+    "category": "Top level",
+    "purpose": "[Required] Initialize Arkham Asylum Table",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "10",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Batman / Survival",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "11",
+    "category": "Batman / Survival",
+    "purpose": "Infinite Health",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "20",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Enemies / Combat",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "21",
+    "category": "Enemies / Combat",
+    "purpose": "Freeze Enemies",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "22",
+    "category": "Enemies / Combat",
+    "purpose": "Super Damage (10x Equivalent, Batarangs Included) [Test] (-)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      189
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "23",
+    "category": "Enemies / Combat",
+    "purpose": "One-Hit Kill (Batarangs Included) [Test] (=)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      187
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "30",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gadgets / Reach",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "31",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Grapple Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "32",
+    "category": "Gadgets / Reach",
+    "purpose": "Extra-Long Batarang Distance",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "40",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Gameplay / Time",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "48",
+    "category": "Gameplay / Time",
+    "purpose": "Repair Environmental Analysis / Riddler Scan (One-Shot)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "47",
+    "category": "Gameplay / Time",
+    "purpose": "Freeze Story / Total Play Timer",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "50",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Challenge Modes",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "51",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score = Target",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "52",
+    "category": "Challenge Modes",
+    "purpose": "Challenge Score Target",
+    "codeType": "4 Bytes",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "53",
+    "category": "Challenge Modes",
+    "purpose": "Freeze General / Shock and Awe Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "54",
+    "category": "Challenge Modes",
+    "purpose": "Freeze Predator Challenge Timer [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "55",
+    "category": "Challenge Modes",
+    "purpose": "Reset General / Shock and Awe Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "56",
+    "category": "Challenge Modes",
+    "purpose": "Reset Predator Timer to 0 [Test]",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "60",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Position / Teleport",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "61",
+    "category": "Position / Teleport",
+    "purpose": "Save Position (J)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      74
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "62",
+    "category": "Position / Teleport",
+    "purpose": "Teleport to Saved Position (K)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      75
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "63",
+    "category": "Position / Teleport",
+    "purpose": "Undo / Redo Last Teleport (L)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      76
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "64",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 1 Body Height (F1)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      112
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "65",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 2 Body Heights (F2)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      113
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "66",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 5 Body Heights (F3)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      114
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "67",
+    "category": "Position / Teleport",
+    "purpose": "Teleport Up 10 Body Heights (F4)",
+    "codeType": "Auto Assembler",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [
+      115
+    ],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  },
+  {
+    "version": "v7",
+    "id": "90",
+    "category": "[Required] Initialize Arkham Asylum Table",
+    "purpose": "Future Test: Undetectable / Enemies Ignore Batman",
+    "codeType": "Category",
+    "status": "See project testing notes; presence is not proof of working behavior",
+    "virtualKeyCodes": [],
+    "table": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT"
+  }
+]

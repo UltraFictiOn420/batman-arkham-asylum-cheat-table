@@ -1,0 +1,51 @@
+[
+  {
+    "version": "v1",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v1/Batman Arkham Asylum GOTY - Original v1.CT",
+    "bytes": 22929,
+    "sha256": "0fd89a10ccae8781bbaa934d02717e4194a44e51df02a02fe24b6ebbd3bdcc98"
+  },
+  {
+    "version": "v2",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v2/Batman Arkham Asylum GOTY - Original v2.CT",
+    "bytes": 24068,
+    "sha256": "12b3b63cea6453b9c7b902cb9c254b4a7a6b299d297d362f1bfe8b9b13232449"
+  },
+  {
+    "version": "v3",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v3/Batman Arkham Asylum GOTY - Original v3.CT",
+    "bytes": 27285,
+    "sha256": "7232df4c90606daa6dd0eb97b97ad597c8824e5a532a45debcfae54f45dd0d6d"
+  },
+  {
+    "version": "v4",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v4/Batman Arkham Asylum GOTY - Original v4.CT",
+    "bytes": 21302,
+    "sha256": "34810bbfb02dd852b9a99d980822ddd44b638e7fa2c43411af5ab5a7ed1904bf"
+  },
+  {
+    "version": "v5",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v5/Batman Arkham Asylum GOTY - Original v5.CT",
+    "bytes": 21553,
+    "sha256": "b8fdbd65b1b67f5ba4b6e8f633eea7753c78e128eaa47d1e1eda0116ffbf634f"
+  },
+  {
+    "version": "v6",
+    "status": "Historical; superseded; not recommended",
+    "path": "tables/history/v6/Batman Arkham Asylum GOTY - Original v6.CT",
+    "bytes": 22415,
+    "sha256": "79564871fe611fca568b3d9de98afdae230d86d133de8a9d28a77ac8884a037b"
+  },
+  {
+    "version": "v7",
+    "status": "Latest retained table; partial gameplay verification",
+    "path": "tables/recommended/v7/Batman Arkham Asylum GOTY - Original v7.CT",
+    "bytes": 24148,
+    "sha256": "51b7ef8f813a20c929f3652288900719b8d3284b13ba8d277278aac0b5561405"
+  }
+]

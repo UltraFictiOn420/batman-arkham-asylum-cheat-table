@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+pydeps/
+tools/
+*.dmp
+*.log
+*.exe
+*.dll
+*.nupkg
+.env
+.env.*
+scan-results/
+development/outputs/

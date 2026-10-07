@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"[Required] Initialize Arkham Asylum Table"</Description>
+      <Options moHideChildren="1"/>
+      <Color>008000</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+
+if BA and BA.shutdown then BA.shutdown() end
+openProcess('ShippingPC-BmGame.exe')
+
+BA = {
+  version = 7, flags = {}, saved = nil, undo = nil, tick = 0,
+  objects = {}, enemies = {}, originals = {}, captured = {},
+  moduleName = 'ShippingPC-BmGame.exe',
+  expectedHash = '4DAC1F5E2AC6710B7378FDCE74601F616F4753E3756CB5FDA63C7519CC2EB028'
+}
+
+local moduleBase = getAddressSafe(BA.moduleName)
+if not moduleBase then error('Batman: Arkham Asylum GOTY is not open.') end
+BA.moduleBase = moduleBase
+BA.gNames = moduleBase + 0x22A1C74
+BA.gObjects = moduleBase + 0x22A1CA4
+
+local function rint(a) local ok,v=pcall(readInteger,a); if ok then return v end end
+local function rfloat(a) local ok,v=pcall(readFloat,a); if ok then return v end end
+local function rbyte(a) local ok,v=pcall(readBytes,a,1,false); if ok then return v end end
+local function wint(a,v) pcall(writeInteger,a,v) end
+local function wfloat(a,v) pcall(writeFloat,a,v) end
+local function wbyte(a,v) pcall(writeBytes,a,v) end
+BA.rint,BA.rfloat,BA.rbyte,BA.wint,BA.wfloat,BA.wbyte=rint,rfloat,rbyte,wint,wfloat,wbyte
+
+BA.nameCache = {}
+BA.classNameCache = {}
+BA.isACache = {}
+function BA.nameAt(index)
+  if not index or index < 0 or index > 200000 then return nil end
+  if BA.nameCache[index] then return BA.nameCache[index] end
+  local data=rint(BA.gNames)
+  local count=rint(BA.gNames+4)
+  if not data or not count or index >= count then return nil end
+  local entry=rint(data+index*4)
+  if not entry then return nil end
+  local ok,s=pcall(readString,entry+0x10,128,false)
+  if ok and s and s ~= '' then BA.nameCache[index]=s return s end
+end
+
+function BA.objectName(obj) if not obj or obj==0 then return nil end return BA.nameAt(rint(obj+0x20)) end
+function BA.classPtr(obj) return obj and rint(obj+0x28) or nil end
+function BA.className(obj)
+  if not obj then return nil end
+  local c=BA.classPtr(obj)
+  if not c then return nil end
+  local cached=BA.classNameCache[c]
+  if cached then return cached end
+  local value=BA.objectName(c)
+  if value then BA.classNameCache[c]=value end
+  return value
+end
+function BA.isA(obj,wanted)
+  local c=BA.classPtr(obj)
+  if not c then return false end
+  local cacheKey=tostring(c)..':'..wanted
+  if BA.isACache[cacheKey]~=nil then return BA.isACache[cacheKey] end
+  for i=1,40 do
+    if not c or c==0 then BA.isACache[cacheKey]=false return false end
+    if BA.objectName(c)==wanted then BA.isACache[cacheKey]=true return true end
+    c=rint(c+0x30)
+  end
+  BA.isACache[cacheKey]=false
+  return false
+end
+function BA.valid(obj)
+  if not obj or obj < 0x10000 then return false end
+  return BA.classPtr(obj) ~= nil and BA.objectName(obj) ~= nil
+end
+function BA.liveAs(obj,wanted,allowSubclass)
+  if not BA.valid(obj) then return false end
+  local data=rint(BA.gObjects)
+  local count=rint(BA.gObjects+4)
+  local index=rint(obj+4)
+  if not data or not count or not index or index<0 or index>=count then return false end
+  if rint(data+index*4)~=obj then return false end
+  if allowSubclass then return BA.isA(obj,wanted) end
+  return BA.className(obj)==wanted
+end
+
+function BA.scanLive()
+  local data=rint(BA.gObjects)
+  local count=rint(BA.gObjects+4)
+  if not data or not count or count < 1000 then return end
+  -- Streamed sublevels may predate Batman by tens of thousands of entries.
+  -- Read their pointer range in one block, then use cached class metadata.
+  local first=math.max(0,count-50000)
+  local span=count-first
+  local ok,raw=pcall(readBytes,data+first*4,span*4,true)
+  if not ok or not raw or #raw < span*4 then return end
+  local found={}
+  local enemies={}
+  for n=0,span-1 do
+    local j=n*4+1
+    local obj=raw[j]+raw[j+1]*0x100+raw[j+2]*0x10000+raw[j+3]*0x1000000
+    if obj and obj~=0 then
+      local cn=BA.className(obj)
+      if cn then
+        if cn=='RPawnPlayerBm' then found.pawn=obj
+        elseif cn=='RPlayerControllerBm' then found.controller=obj
+        elseif cn=='RExperienceSystem' then found.experience=obj
+        elseif cn=='RPersistentData' then found.pdata=obj
+        elseif cn=='RBatarang' then found.batarang=obj
+        elseif cn=='RGrappleGun' then found.grapple=obj
+        elseif cn=='RFlagManager' then found.flagManager=obj
+        elseif cn=='RGFxMovieChallengeHUD' or (string.find(cn,'ChallengeHUD') and BA.isA(obj,'RGFxMovieChallengeHUD')) then found.challengeHUD=obj
+        elseif cn=='RChallengeTimer' or (string.find(cn,'ChallengeTimer') and BA.isA(obj,'RChallengeTimer')) then found.challengeTimer=obj
+        end
+        if cn~='RPawnPlayerBm' and string.find(cn,'Pawn') and BA.isA(obj,'RPawnVillain') then
+          enemies[#enemies+1]=obj
+        end
+      end
+    end
+  end
+  -- Replace the entire snapshot. Retaining a missing pointer across a streamed
+  -- level transition can target a different UObject if UE3 reuses its address.
+  BA.objects=found
+  BA.enemies=enemies
+end
+
+local function hasBit(v,m) return v and (v % (m*2) >= m) end
+local function bitSet(v,m,on)
+  if not v then return nil end
+  local present=hasBit(v,m)
+  if on and not present then return v+m end
+  if not on and present then return v-m end
+  return v
+end
+BA.hasBit,BA.bitSet=hasBit,bitSet
+
+function BA.remember(key,address,kind,owner)
+  BA.originals[key]=BA.originals[key] or {}
+  local map=BA.originals[key]
+  if map[address]==nil then
+    local value
+    if kind=='float' then value=rfloat(address)
+    elseif kind=='byte' then value=rbyte(address)
+    else value=rint(address) end
+    if value~=nil then
+      local entry={value=value,kind=kind,owner=owner}
+      if owner then
+        entry.classPtr=BA.classPtr(owner)
+        entry.nameIndex=rint(owner+0x20)
+        entry.nameNumber=rint(owner+0x24)
+        entry.outerPtr=rint(owner+0x1C)
+      end
+      map[address]=entry
+    end
+  end
+end
+function BA.restore(key)
+  local map=BA.originals[key]
+  if not map then return end
+  for a,entry in pairs(map) do
+    local safe=true
+    if entry.owner then
+      safe=BA.classPtr(entry.owner)==entry.classPtr
+        and rint(entry.owner+0x20)==entry.nameIndex
+        and rint(entry.owner+0x24)==entry.nameNumber
+        and rint(entry.owner+0x1C)==entry.outerPtr
+    end
+    if safe then
+      if entry.kind=='float' then wfloat(a,entry.value)
+      elseif entry.kind=='byte' then wbyte(a,entry.value)
+      else wint(a,entry.value) end
+    end
+  end
+  BA.originals[key]={}
+end
+
+function BA.allocSymbol(name,value,kind)
+  local a=allocateMemory(8)
+  registerSymbol(name,a,true)
+  if kind=='float' then wfloat(a,value) else wint(a,value) end
+  return a
+end
+BA.symbols={}
+BA.symbols.score=BA.allocSymbol('BA_ChallengeScoreTarget',9999999,'int')
+
+function BA.deferOff(m)
+  local t=createTimer(nil,false); t.Interval=75
+  t.OnTimer=function(x) x.Enabled=false; pcall(function() m.Active=false end); x.destroy() end
+  t.Enabled=true
+end
+function BA.getPawn()
+  local p=BA.objects.pawn
+  if BA.valid(p) and BA.isA(p,'RPawnPlayer') then return p end
+  BA.scanLive(); p=BA.objects.pawn
+  if BA.valid(p) then return p end
+end
+function BA.savePosition()
+  local p=BA.getPawn(); if not p then error('Batman pawn is not loaded.') end
+  BA.saved={rfloat(p+0x54),rfloat(p+0x58),rfloat(p+0x5C)}
+end
+function BA.teleportSaved()
+  local p=BA.getPawn(); if not p then error('Batman pawn is not loaded.') end
+  if not BA.saved then error('No saved position yet.') end
+  BA.undo={rfloat(p+0x54),rfloat(p+0x58),rfloat(p+0x5C)}
+  wfloat(p+0x54,BA.saved[1]); wfloat(p+0x58,BA.saved[2]); wfloat(p+0x5C,BA.saved[3])
+  wfloat(p+0xFC,0); wfloat(p+0x100,0); wfloat(p+0x104,0)
+end
+function BA.undoTeleport()
+  local p=BA.getPawn(); if not p then error('Batman pawn is not loaded.') end
+  if not BA.undo then error('No teleport to undo yet.') end
+  local now={rfloat(p+0x54),rfloat(p+0x58),rfloat(p+0x5C)}
+  wfloat(p+0x54,BA.undo[1]); wfloat(p+0x58,BA.undo[2]); wfloat(p+0x5C,BA.undo[3])
+  wfloat(p+0xFC,0); wfloat(p+0x100,0); wfloat(p+0x104,0); BA.undo=now
+end
+function BA.moveUp(mult)
+  local p=BA.getPawn(); if not p then error('Batman pawn is not loaded.') end
+  BA.undo={rfloat(p+0x54),rfloat(p+0x58),rfloat(p+0x5C)}
+  wfloat(p+0x5C,(rfloat(p+0x5C) or 0)+(96*mult)); wfloat(p+0x104,0)
+end
+
+function BA.repairEnvironmentalAnalysis()
+  BA.scanLive()
+  local fm=BA.objects.flagManager
+  if not BA.liveAs(fm,'RFlagManager',false) then
+    error('The live story flag manager is not loaded.')
+  end
+  -- RFlagManager.Flags is a UE3 TMap<FString,bool> at +0x30. Search for the
+  -- exact story flag rather than relying on a session-specific map slot.
+  local data=rint(fm+0x30)
+  local count=rint(fm+0x34)
+  local maximum=rint(fm+0x38)
+  if not data or not count or not maximum or count<0 or maximum<count or maximum>100000 then
+    error('The story flag map is not valid in this scene.')
+  end
+  local wanted='Global.Batman_EnvAnalysisDisabled'
+  for i=0,maximum-1 do
+    local entry=data+i*0x18
+    local keyData=rint(entry)
+    local keyCount=rint(entry+4)
+    if keyData and keyData>0x10000 and keyCount and keyCount>1 and keyCount<128 then
+      local ok,key=pcall(readString,keyData,keyCount,true)
+      if ok and key and string.gsub(key,'\0+$','')==wanted then
+        wint(entry+0x0C,0)
+        BA.lastRepair='Environmental Analysis enabled; story flag cleared.'
+        return true
+      end
+    end
+  end
+  error('The Environmental Analysis story flag was not found in this loaded game.')
+end
+
+function BA.loop()
+  if not BA then return end
+  BA.tick=BA.tick+1
+  if BA.tick==1 or BA.tick%50==0 then BA.scanLive() end
+  local p=BA.objects.pawn
+  if BA.liveAs(p,'RPawnPlayerBm',false) then
+    if BA.flags.health then
+      local mx=rint(p+0x2A8) or rint(p+0x9E0) or 100
+      if mx>0 and mx<100000 then wint(p+0x2A4,mx) end
+    end
+  end
+
+  for _,e in ipairs(BA.enemies) do
+    if BA.liveAs(e,'RPawnVillain',true) and not BA.isA(e,'RPawnPlayerBm') then
+      if BA.flags.freezeEnemies then BA.remember('freeze',e+0x8C,'float',e); wfloat(e+0x8C,0.001) end
+      if BA.flags.oneHit then
+        local hp=rint(e+0x2A4); if hp and hp>1 and hp<1000000 then wint(e+0x2A4,1) end
+      elseif BA.flags.superDamage then
+        local maxh=rfloat(e+0x878)
+        local hp=rint(e+0x2A4)
+        if maxh and maxh>0 and maxh<100000 and hp and hp>math.max(1,math.floor(maxh/10)) then wint(e+0x2A4,math.max(1,math.floor(maxh/10))) end
+      end
+      if BA.flags.oneHit or BA.flags.superDamage then
+        BA.remember('batarangKill',e+0x654,'int',e); local b=rint(e+0x654); if b then wint(e+0x654,bitSet(b,0x4000,true)) end
+      end
+    end
+  end
+  if not BA.flags.freezeEnemies and BA.originals.freeze then BA.restore('freeze') end
+  if not BA.flags.oneHit and not BA.flags.superDamage and BA.originals.batarangKill then BA.restore('batarangKill') end
+
+  local b=BA.objects.batarang
+  if BA.liveAs(b,'RBatarang',false) and BA.flags.batarangRange then BA.remember('batarangRange',b+0x2EC,'float',b); wfloat(b+0x2EC,50000)
+  elseif not BA.flags.batarangRange and BA.originals.batarangRange then BA.restore('batarangRange') end
+  local g=BA.objects.grapple
+  if BA.liveAs(g,'RGrappleGun',false) and BA.flags.grappleRange then
+    for _,o in ipairs({0x2B8,0x2C0,0x2C8}) do BA.remember('grappleRange',g+o,'float',g); wfloat(g+o,50000) end
+  elseif not BA.flags.grappleRange and BA.originals.grappleRange then BA.restore('grappleRange')
+  end
+
+  local x=BA.objects.experience
+  local pd=BA.objects.pdata
+  if (not BA.liveAs(pd,'RPersistentData',false)) and BA.liveAs(x,'RExperienceSystem',false) then pd=rint(x+0x1AC); BA.objects.pdata=pd end
+  if BA.liveAs(pd,'RPersistentData',false) then
+    if BA.flags.storyTimer then
+      if BA.captured.story==nil then BA.captured.story=rfloat(pd+0x224) end
+      if BA.captured.story then wfloat(pd+0x224,BA.captured.story) end
+    else BA.captured.story=nil end
+  end
+
+  local hud=BA.objects.challengeHUD
+  if BA.liveAs(hud,'RGFxMovieChallengeHUD',true) then
+    if BA.flags.challengeScore then wint(hud+0xA0,rint(BA.symbols.score) or 9999999) end
+    if BA.flags.predatorTimer then
+      if BA.captured.predator==nil then BA.captured.predator=rfloat(hud+0xEC) end
+      if BA.captured.predator then wfloat(hud+0xEC,BA.captured.predator) end
+    else BA.captured.predator=nil end
+  end
+  local ct=BA.objects.challengeTimer
+  if BA.liveAs(ct,'RChallengeTimer',true) then
+    if BA.flags.challengeTimer then
+      if BA.captured.challenge==nil then BA.captured.challenge=rfloat(ct+0x1A8) end
+      if BA.captured.challenge then wfloat(ct+0x1A8,BA.captured.challenge) end
+    else BA.captured.challenge=nil end
+  end
+end
+
+BA.timer=createTimer(nil,false); BA.timer.Interval=100; BA.timer.OnTimer=function() local ok,err=pcall(BA.loop); if not ok then BA.lastError=err end end; BA.timer.Enabled=true
+BA.scanLive()
+
+function BA.shutdown()
+  if BA.timer then BA.timer.destroy(); BA.timer=nil end
+  for _,k in ipairs({'freeze','batarangKill','batarangRange','grappleRange'}) do pcall(BA.restore,k) end
+  pcall(unregisterSymbol,'BA_ChallengeScoreTarget')
+end
+{$asm}
+
+[DISABLE]
+{$lua}
+if syntaxcheck then return end
+if BA and BA.shutdown then BA.shutdown() end
+BA=nil
+{$asm}]]></AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>10</ID><Description>"Batman / Survival"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>11</ID><Description>"Infinite Health"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.health=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.health=false
+{$asm}]]></AssemblerScript></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>20</ID><Description>"Enemies / Combat"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>21</ID><Description>"Freeze Enemies"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.freezeEnemies=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.freezeEnemies=false
+{$asm}]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>22</ID><Description>"Super Damage (10x Equivalent, Batarangs Included) [Test] (-)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+local other=getAddressList().getMemoryRecordByID(23)
+if other and other.Active then other.Active=false end
+BA.flags.oneHit=false
+BA.flags.superDamage=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.superDamage=false
+{$asm}]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>189</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>23</ID><Description>"One-Hit Kill (Batarangs Included) [Test] (=)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+local other=getAddressList().getMemoryRecordByID(22)
+if other and other.Active then other.Active=false end
+BA.flags.superDamage=false
+BA.flags.oneHit=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.oneHit=false
+{$asm}]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>187</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>30</ID><Description>"Gadgets / Reach"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>31</ID><Description>"Extra-Long Grapple Distance"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.grappleRange=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.grappleRange=false
+{$asm}]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>32</ID><Description>"Extra-Long Batarang Distance"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.batarangRange=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.batarangRange=false
+{$asm}]]></AssemblerScript></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>40</ID><Description>"Gameplay / Time"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>48</ID><Description>"Repair Environmental Analysis / Riddler Scan (One-Shot)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+BA.repairEnvironmentalAnalysis(); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>47</ID><Description>"Freeze Story / Total Play Timer"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.storyTimer=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.storyTimer=false
+{$asm}]]></AssemblerScript></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>50</ID><Description>"Challenge Modes"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>51</ID><Description>"Challenge Score = Target"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.challengeScore=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.challengeScore=false
+{$asm}]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>52</ID><Description>"Challenge Score Target"</Description><ShowAsSigned>0</ShowAsSigned><VariableType>4 Bytes</VariableType><Address>BA_ChallengeScoreTarget</Address></CheatEntry>
+            <CheatEntry><ID>53</ID><Description>"Freeze General / Shock and Awe Challenge Timer [Test]"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.challengeTimer=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.challengeTimer=false
+{$asm}]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>54</ID><Description>"Freeze Predator Challenge Timer [Test]"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.predatorTimer=true
+{$asm}
+[DISABLE]
+{$lua}
+if syntaxcheck then return end BA.flags.predatorTimer=false
+{$asm}]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>55</ID><Description>"Reset General / Shock and Awe Timer to 0 [Test]"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+BA.scanLive(); local o=BA.objects.challengeTimer; if BA.valid(o) then BA.wfloat(o+0x1A8,0) end; BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript></CheatEntry>
+            <CheatEntry><ID>56</ID><Description>"Reset Predator Timer to 0 [Test]"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end
+BA.scanLive(); local o=BA.objects.challengeHUD; if BA.valid(o) then BA.wfloat(o+0xEC,0) end; BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>60</ID><Description>"Position / Teleport"</Description><Options moHideChildren="1"/><GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry><ID>61</ID><Description>"Save Position (J)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.savePosition(); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>74</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>62</ID><Description>"Teleport to Saved Position (K)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.teleportSaved(); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>75</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>63</ID><Description>"Undo / Redo Last Teleport (L)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.undoTeleport(); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>76</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>64</ID><Description>"Teleport Up 1 Body Height (F1)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.moveUp(1); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>112</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>65</ID><Description>"Teleport Up 2 Body Heights (F2)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.moveUp(2); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>113</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>66</ID><Description>"Teleport Up 5 Body Heights (F3)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.moveUp(5); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>114</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+            <CheatEntry><ID>67</ID><Description>"Teleport Up 10 Body Heights (F4)"</Description><VariableType>Auto Assembler Script</VariableType><AssemblerScript><![CDATA[[ENABLE]
+{$lua}
+if syntaxcheck then return end BA.moveUp(10); BA.deferOff(memrec)
+{$asm}
+[DISABLE]]]></AssemblerScript><Hotkeys><Hotkey><Action>Toggle Activation</Action><Keys><Key>115</Key></Keys><ID>0</ID></Hotkey></Hotkeys></CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry><ID>90</ID><Description>"Future Test: Undetectable / Enemies Ignore Batman"</Description><GroupHeader>1</GroupHeader></CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>Original table built live for Batman: Arkham Asylum GOTY Steam v1.1.1.0. Table revision: v7.
+Target executable: ShippingPC-BmGame.exe (32-bit)
+Expected SHA-256: 4DAC1F5E2AC6710B7378FDCE74601F616F4753E3756CB5FDA63C7519CC2EB028
+
+This v7 uses Unreal Engine 3 object reflection and live class discovery. Live writes verify the UObject registry, expected class, and fresh scan snapshot; restores are identity-checked to avoid reused streamed-object addresses. The one-shot Environmental Analysis repair clears only the exact stuck story flag and does not force it continuously. No console commands and no copied trainer scripts.
+Enable the green initializer first. Entries marked [Test] need validation in their relevant gameplay mode.</Comments>
+</CheatTable>
